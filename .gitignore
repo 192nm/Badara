@@ -19,3 +19,5 @@ android/**/build/
 .idea/
 *.iml
 .vscode/
+
+web/tsconfig.tsbuildinfo

@@ -55,6 +55,12 @@ fun MainScreen(vm: MainViewModel = viewModel()) {
             Button(onClick = { vm.refreshFiles() }) {
                 Text("새로고침")
             }
+            if (vm.pendingActions.isNotEmpty()) {
+                Text("임시 동기화 큐: ${vm.pendingActions.joinToString()}")
+                Button(onClick = { vm.consumePendingActions() }) {
+                    Text("재시도")
+                }
+            }
             LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 items(vm.files) { file ->
                     Text("${file.filename} (${file.syncStatus})")
