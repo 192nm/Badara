@@ -1,0 +1,21 @@
+# General
+.DS_Store
+
+# Backend
+backend/.gradle/
+backend/build/
+backend/data-storage/
+
+# Web
+web/node_modules/
+web/dist/
+
+# Android
+android/.gradle/
+android/local.properties
+android/**/build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
